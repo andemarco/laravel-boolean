@@ -5,8 +5,11 @@
   font-family: "Rubik", sans-serif;
 }
 
-body {
-  background-color: grey;
+main {
+  background-color: black;
+  height: 200px;
+  color: white;
+  text-align: center;
 }
 
 .navbar {
@@ -35,7 +38,7 @@ body {
 
 .navbar ul li {
   display: inline;
-  padding: 0px 25px;
+  padding: 10px 25px;
 }
 
 .navbar ul li:hover {
@@ -56,5 +59,46 @@ body {
   border-radius: 10px;
   color: white;
   font-size: 1.1em;
+}
+
+.footer {
+  background-color: #1A3D59;
+  padding-bottom: 40px;
+}
+
+.footer .footer_first {
+  display: flex;
+  justify-content: space-between;
+  width: 82%;
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer .footer_first .footer_first_left {
+  color: white;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 20px;
+}
+
+.footer .footer_first .footer_first_left img {
+  height: 80px;
+}
+
+.footer .footer_first .footer_first_right ul {
+  list-style: none;
+  line-height: 28px;
+  font-size: 1.2em;
+}
+
+.footer .footer_first .footer_first_right ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer .footer_first .footer_first_right ul a:hover {
+  text-decoration: underline;
 }
 

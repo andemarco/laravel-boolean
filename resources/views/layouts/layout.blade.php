@@ -6,7 +6,7 @@
     {{-- /HEADER --}}
     {{-- MAIN --}}
     <main>
-      @yield('section')
+      @yield('main')
     </main>
     {{-- /MAIN --}}
     {{-- FOOTER --}}
