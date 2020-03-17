@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // ROTTA VERSO HOMEPAGE
-Route::get('/', 'StaticPageController@homeView');
+Route::get('/', 'StaticPageController@homeView')->getName('home');
 
 
 //ROTTA VERSO PAGINA DEGLI STUDENTI
-Route::get('/', 'StudentListController@getStudentList');
+Route::get('/student', 'StudentListController@getStudentList');
