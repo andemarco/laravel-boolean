@@ -6,8 +6,8 @@
       <div class="students_box_up">
         <img src="{{$student['img']}}" alt="">
         <div class="">
-          <h5>"{{$student['nome']}} ({{$student['eta']}} anni)</h5>
-          <h6>Assunto da {{$student['azienda']}} come {{$student['lavoro']}}</h6>
+          <a href=""> <h5>{{$student['nome']}} ({{$student['eta']}} anni)</h5></a>
+          <h6>Assunt{{$student['genere'] == 'f' ? 'a' : 'o' }} da {{$student['azienda']}} come {{$student['lavoro']}}</h6>
         </div>
       </div>
       <p>{{$student['bio']}}</p>

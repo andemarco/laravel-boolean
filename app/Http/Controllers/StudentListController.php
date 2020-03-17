@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 
 class StudentListController extends Controller
 {
-  // FUNZIONE HOMEPAGE
+  // FUNZIONE studenti
     public function getStudentList()
     {
       return view('student');
+    }
+  // FUNZIONE studente
+    public function getStudent()
+    {
+      return view('show');
     }
 
 }

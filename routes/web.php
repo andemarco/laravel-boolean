@@ -19,3 +19,5 @@ Route::get('/', 'StaticPageController@homeView')->name('home');
 
 //ROTTA VERSO PAGINA DEGLI STUDENTI
 Route::get('/student', 'StudentListController@getStudentList')->name('students');
+//ROTTA VERSO SHOW DEGLI STUDENTI
+Route::get('/student/show', 'StudentListController@getStudent')->name('show');
