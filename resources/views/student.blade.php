@@ -1,67 +1,17 @@
 @extends('layouts.layout')
-
 @section('main')
   <div class="students">
+    @foreach ((config('students.studentList')) as $student)
     <div class="students_box">
       <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
+        <img src="{{$student['img']}}" alt="">
         <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
+          <h5>"{{$student['nome']}} ({{$student['eta']}} anni)</h5>
+          <h6>Assunto da {{$student['azienda']}} come {{$student['lavoro']}}</h6>
         </div>
       </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
+      <p>{{$student['bio']}}</p>
     </div>
-    <div class="students_box">
-      <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
-        <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
-        </div>
-      </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
-    </div>
-    <div class="students_box">
-      <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
-        <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
-        </div>
-      </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
-    </div>
-    <div class="students_box">
-      <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
-        <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
-        </div>
-      </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
-    </div>
-    <div class="students_box">
-      <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
-        <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
-        </div>
-      </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
-    </div>
-    <div class="students_box">
-      <div class="students_box_up">
-        <img src="https://www.boolean.careers/images/students/biagini.png" alt="">
-        <div class="">
-          <h5>Alessandro Biagini (25 anni)</h5>
-          <h6>Assunto da DISC SPA come web developer</h6>
-        </div>
-      </div>
-      <p>Da giocatore professionista di basket a sviluppatore web. 6 mesi di impegno da MVP e un memorabile tap-in targato Boolean hanno garantito ad Alessandro un solido futuro come web developer.</p>
-    </div>
-
+    @endforeach
   </div>
 @endsection
