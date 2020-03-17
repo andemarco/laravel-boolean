@@ -12,9 +12,9 @@
       <nav class="navbar">
         <img src="https://www.boolean.careers/images/common/logo.png" alt="">
         <ul>
-          <li class="{{ (Request::route()->getName() == 'home') ? 'active' : '' }}"><a href="#">HOME</a></li>
+          <li class="{{ (Request::route()->getName() == 'home') ? 'active' : '' }}"><a href="{{route('home')}}">HOME</a></li>
           <li><a href="#">CORSO</a></li>
-          <li><a href="#">DOPO IL CORSO</a></li>
+          <li class="{{ (Request::route()->getName() == 'students') ? 'active' : '' }}"><a href="{{route('students')}}">DOPO IL CORSO</a></li>
           <li><a href="#">LEZIONE GRATUITA</a></li>
           <li> <button type="button" name="button">CANDIDATI ORA</button> </li>
         </ul>
