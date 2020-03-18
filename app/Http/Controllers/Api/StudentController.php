@@ -7,8 +7,17 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function gender($value='')
-    {
-      // code...
+
+    public function  getGenere(Request $request){
+
+        $result = [
+            'error' => '',
+            'resonse' => []
+        ];
+
+        $data = $request->all();
+        $students = config('students.studentList');
+        var_dump($data['genere']);
     }
+
 }

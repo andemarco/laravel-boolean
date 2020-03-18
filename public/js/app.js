@@ -29898,25 +29898,19 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 $(document).ready(function () {
   $('#options').change(function () {
-    // console.log(window.location.protocol + '//'
-    //   + window.location.host + '/api/students/genders');
+    console.log($(this).val());
+    console.log(window.location.origin + "/students/genders");
     $.ajax({
-      'url': window.location.protocol + '//' + window.location.host + '/student/genders',
-      'data': {
+      url: window.location.origin + "/student/genders",
+      method: "POST",
+      data: {
         'genere': $(this).val()
       },
-      'method': 'POST',
-      success: function success(data) {
-        console.log(data.error);
-
-        if (data.response.length > 0) {
-          console.log(data.response);
-        } else {
-          console.log('no students');
-        }
+      success: function success(data, stato) {
+        console.log(data);
       },
-      error: function error() {
-        console.log('error');
+      error: function error(richiesta, stato, errori) {
+        alert("E' avvenuto un errore. " + errore);
       }
     });
   });
