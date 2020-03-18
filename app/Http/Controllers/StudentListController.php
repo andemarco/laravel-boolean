@@ -12,9 +12,13 @@ class StudentListController extends Controller
       return view('student');
     }
   // FUNZIONE studente
-    public function getStudent()
+    public function getStudent($slug)
     {
-      return view('show');
+      foreach ((config('students.studentList')) as $student) {
+          if ($student['slug'] == $slug) {
+            return view('show', ['student' => $student]);
+        }
+      }
+      return 'ERROR 404';
     }
-
 }
