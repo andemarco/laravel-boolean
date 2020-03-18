@@ -1,5 +1,12 @@
 @extends('layouts.layout')
 @section('main')
+  <div class="filter">
+      <select name="filter" id="options">
+          <option value="All">All</option>
+          <option value="f">f</option>
+          <option value="m">m</option>
+      </select>
+  </div>
   <div class="students">
     @foreach ((config('students.studentList')) as $student)
     <div class="students_box">
