@@ -19,7 +19,10 @@ Route::get('/', 'StaticPageController@homeView')->name('home');
 
 //ROTTA VERSO PAGINA DEGLI STUDENTI
 Route::get('/student', 'StudentListController@getStudentList')->name('students');
-//ROTTA VERSO PAGINA DEGLI STUDENTI
-Route::get('/studentsdb', 'StudentdbController@index')->name('studentsdb');
+
+//ROTTA VERSO PAGINA DEGLI STUDENTI CON DB MYSQLI
+Route::get('/studentdb', 'StudentdbListController@getStudentdbList')->name('studentsdb');
+
+
 //ROTTA VERSO SHOW DEGLI STUDENTI
 Route::get('/student/show/{slug}', 'StudentListController@getStudent')->name('show');
