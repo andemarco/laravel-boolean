@@ -8,16 +8,12 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
 
-    public function  getGenere(Request $request){
+    public function  getGenere(){
 
-        $result = [
-            'error' => '',
-            'resonse' => []
-        ];
 
-        $data = $request->all();
         $students = config('students.studentList');
-        var_dump($data['genere']);
+
+        return response()->json($students);
     }
 
 }
